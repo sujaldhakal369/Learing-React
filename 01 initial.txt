@@ -1,0 +1,16 @@
+step 1: npm create vite@latest
+
+<write project name>   --> yesma chai sab project banni ho. paila kei project xa vane paila kei lekhni.
+choose react
+choose javascript
+
+
+// if pailai banako project xa vane yeh bata suru garni
+
+step 2: cd <folder ma jani>
+npm install
+npm run dev
+
+//to import bootstack
+step 1: go to main.jsx
+step 2:import "bootstrap/dist/css/bootstrap.min.css";
