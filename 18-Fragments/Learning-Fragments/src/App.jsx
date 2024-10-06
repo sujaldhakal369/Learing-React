@@ -1,24 +1,18 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import FoodItems from "./components/FoodItem";
+
+import FoodItems from "./components/FoodItems";
 import ErrorMessage from "./components/ErrorMessage";
-// import React from "react";
 
 function App() {
   // let foodItems = [];
-  // let foodItems = ["Vegetables", "fruits", "meat", "egg", "fish", "Dal"];
+  let foodItems = ["Vegetables", "Fruits", "Dal", "Milk", "Egg", "Ghee"];
 
-  // if (foodItems.length === 0) {
-  //   return <h3>Food list not found!!!</h3>;
-  // }
-
-  // let emptymessage =
-  //   foodItems.length === 0 ? <h3>Food list not found!!!</h3> : null;
   return (
     <>
       <h1>Healthy Food</h1>
-      <ErrorMessage></ErrorMessage>
-      <FoodItems></FoodItems>
+      <ErrorMessage items={foodItems}></ErrorMessage>
+      <FoodItems items={foodItems}></FoodItems>
     </>
   );
 }
