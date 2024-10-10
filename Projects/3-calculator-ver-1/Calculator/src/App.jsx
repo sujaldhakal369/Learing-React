@@ -4,10 +4,13 @@ import BtnContainer from "./components/BtnContainer";
 
 function App() {
   return (
-    <div className={styles.calculator}>
-      <Display></Display>
-      <BtnContainer></BtnContainer>
-    </div>
+    <>
+      <h1>Calculator</h1>
+      <div className={styles.calculator}>
+        <Display></Display>
+        <BtnContainer></BtnContainer>
+      </div>
+    </>
   );
 }
 
