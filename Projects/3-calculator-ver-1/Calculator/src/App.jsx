@@ -5,7 +5,7 @@ import BtnContainer from "./components/BtnContainer";
 function App() {
   return (
     <>
-      <h1>Calculator</h1>
+      <h1>Calculator App</h1>
       <div className={styles.calculator}>
         <Display></Display>
         <BtnContainer></BtnContainer>
