@@ -22,7 +22,3 @@ step 2:import "bootstrap/dist/css/bootstrap.min.css";
 
 
 
-
-
-todo list
-css modules
