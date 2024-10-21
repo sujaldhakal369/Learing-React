@@ -1,7 +1,7 @@
 import styles from "./BtnContainer.module.css";
 
-const BtnContainer = () => {
-  const btnName = [
+const BtnContainer = ({ onButtonClick }) => {
+  const buttonName = [
     "%",
     "CE",
     "C",
@@ -9,7 +9,7 @@ const BtnContainer = () => {
     "7",
     "8",
     "9",
-    "X",
+    "*",
     "4",
     "5",
     "6",
@@ -26,9 +26,13 @@ const BtnContainer = () => {
 
   return (
     <div className={styles.btnContainer}>
-      {btnName.map((btnName) => (
-        <button key={btnName} className={styles.button}>
-          {btnName}
+      {buttonName.map((buttonName) => (
+        <button
+          key={buttonName}
+          className={styles.button}
+          onClick={() => onButtonClick(buttonName)}
+        >
+          {buttonName}
         </button>
       ))}
     </div>
