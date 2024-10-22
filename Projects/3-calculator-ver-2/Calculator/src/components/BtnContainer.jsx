@@ -9,7 +9,7 @@ const BtnContainer = ({ onButtonClick }) => {
     "7",
     "8",
     "9",
-    "*",
+    "x",
     "4",
     "5",
     "6",
