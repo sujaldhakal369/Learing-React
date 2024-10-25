@@ -1,3 +1,5 @@
+import { RiDeleteBin2Fill } from "react-icons/ri";
+
 function TodoItem({ TodoName, TodoDate, onDeleteClick }) {
   return (
     <div className="container">
@@ -10,7 +12,7 @@ function TodoItem({ TodoName, TodoDate, onDeleteClick }) {
             className="btn btn-danger kg-button button-margin"
             onClick={() => onDeleteClick(TodoName)}
           >
-            Delete
+            <RiDeleteBin2Fill />
           </button>
         </div>
       </div>
