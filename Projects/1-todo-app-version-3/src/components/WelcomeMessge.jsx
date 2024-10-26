@@ -1,5 +1,5 @@
 const WelcomeMessage = () => {
-  return <p>Enjoy your Day.</p>;
+  return <p>No task to do.</p>;
 };
 
 export default WelcomeMessage;
