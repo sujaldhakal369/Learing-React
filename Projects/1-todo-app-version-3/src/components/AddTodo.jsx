@@ -1,42 +1,31 @@
-import { useState } from "react";
+import { useRef } from "react";
 import { IoMdAddCircleOutline } from "react-icons/io";
 
 function AddTodo({ onNewItem }) {
-  const [todoName, setTodoName] = useState("");
-  const [dueDate, setDueDate] = useState("");
+  const todoNameElement = useRef();
+  const dueDateElement = useRef();
 
-  const handleNameChange = (event) => {
-    setTodoName(event.target.value);
-  };
-
-  const handleDateChange = (event) => {
-    setDueDate(event.target.value);
-  };
-
-  const handleAddButtonClicked = () => {
+  const handleAddButtonClicked = (event) => {
+    event.preventDefault();
+    const todoName = todoNameElement.current.value;
+    const dueDate = dueDateElement.current.value;
+    console.log(`${todoName} due on: ${dueDate}`);
+    todoNameElement.current.value = "";
     onNewItem(todoName, dueDate);
-    setDueDate("");
-    setTodoName("");
   };
 
   return (
     <div className="container text-center">
-      <div className="row kg-row">
+      <form className="row kg-row" onSubmit={handleAddButtonClicked}>
         <div className="col-4">
           <input
             type="text"
+            ref={todoNameElement}
             placeholder="enter TODO Here"
-            value={todoName}
-            onChange={handleNameChange}
           />
         </div>
         <div className="col-4">
-          <input
-            type="date"
-            placeholder=""
-            value={dueDate}
-            onChange={handleDateChange}
-          />
+          <input type="date" ref={dueDateElement} placeholder="" />
         </div>
         <div className="col-2">
           <button
@@ -47,7 +36,7 @@ function AddTodo({ onNewItem }) {
             <IoMdAddCircleOutline />
           </button>
         </div>
-      </div>
+      </form>
     </div>
   );
 }
