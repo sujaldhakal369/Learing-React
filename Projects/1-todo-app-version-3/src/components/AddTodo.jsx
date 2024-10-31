@@ -1,17 +1,24 @@
-import { useRef } from "react";
-import { IoMdAddCircleOutline } from "react-icons/io";
+import { useContext, useState } from "react";
+// import { IoMdAddCircleOutline } from "react-icons/io";
+import { TodoItemsContext } from "../store/todo-items-store";
 
-function AddTodo({ onNewItem }) {
-  const todoNameElement = useRef();
-  const dueDateElement = useRef();
+function AddTodo() {
+  const { addNewItem } = useContext(TodoItemsContext);
+  const [todoName, setTodoName] = useState();
+  const [dueDate, setDueDate] = useState();
 
-  const handleAddButtonClicked = (event) => {
-    event.preventDefault();
-    const todoName = todoNameElement.current.value;
-    const dueDate = dueDateElement.current.value;
-    console.log(`${todoName} due on: ${dueDate}`);
-    todoNameElement.current.value = "";
-    onNewItem(todoName, dueDate);
+  const handleNameChange = (event) => {
+    setTodoName(event.target.value);
+  };
+
+  const handleDatwChange = (event) => {
+    setDueDate(event.target.value);
+  };
+
+  const handleAddButtonClicked = () => {
+    addNewItem(todoName, dueDate);
+    setDueDate("");
+    setTodoName("");
   };
 
   return (
@@ -20,12 +27,16 @@ function AddTodo({ onNewItem }) {
         <div className="col-4">
           <input
             type="text"
-            ref={todoNameElement}
+            // ref={todoNameElement}
             placeholder="enter TODO Here"
           />
         </div>
         <div className="col-4">
-          <input type="date" ref={dueDateElement} placeholder="" />
+          <input
+            type="date"
+            // ref={dueDateElement}
+            placeholder=""
+          />
         </div>
         <div className="col-2">
           <button
@@ -33,7 +44,7 @@ function AddTodo({ onNewItem }) {
             className="btn btn-success kg-button kg-button button-margin"
             onClick={handleAddButtonClicked}
           >
-            <IoMdAddCircleOutline />
+            {/* <IoMdAddCircleOutline /> */}
           </button>
         </div>
       </form>
