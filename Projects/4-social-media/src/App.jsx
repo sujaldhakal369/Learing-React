@@ -6,6 +6,7 @@ import Slidebar from "./components/Slidebar";
 
 function App() {
   return (
+    //just a comment
     <div className="app-container">
       <Slidebar></Slidebar>
       <div className="content">
