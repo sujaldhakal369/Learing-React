@@ -6,9 +6,9 @@ const TodoItems = () => {
   const { todoItems } = useContext(TodoItemsContext);
 
   return (
-    <div className="item-container">
+    <div classNameName="item-container">
       {todoItems.map((item) => (
-        <TodoItem 
+        <TodoItem
           key={item.name}
           TodoDate={item.dueDate}
           TodoName={item.name}

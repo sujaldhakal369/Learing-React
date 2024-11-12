@@ -22,26 +22,26 @@ function AddTodo() {
   };
 
   return (
-    <div className="container text-center">
-      <form className="row kg-row" onSubmit={handleAddButtonClicked}>
-        <div className="col-4">
+    <div classNameName="container text-center">
+      <form classNameName="row kg-row" onSubmit={handleAddButtonClicked}>
+        <div classNameName="col-4">
           <input
             type="text"
             // ref={todoNameElement}
             placeholder="enter TODO Here"
           />
         </div>
-        <div className="col-4">
+        <div classNameName="col-4">
           <input
             type="date"
             // ref={dueDateElement}
             placeholder=""
           />
         </div>
-        <div className="col-2">
+        <div classNameName="col-2">
           <button
             type="button"
-            className="btn btn-success kg-button kg-button button-margin"
+            classNameName="btn btn-success kg-button kg-button button-margin"
             onClick={handleAddButtonClicked}
           >
             {/* <IoMdAddCircleOutline /> */}

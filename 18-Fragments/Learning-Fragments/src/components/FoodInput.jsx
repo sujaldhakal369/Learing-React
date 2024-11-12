@@ -5,7 +5,7 @@ const FoodInput = ({ handleonKeyDown }) => {
     <input
       type="text"
       placeholder="Enter food items here"
-      className={styles.FoodInput}
+      classNameName={styles.FoodInput}
       onKeyDown={handleonKeyDown}
     />
   );

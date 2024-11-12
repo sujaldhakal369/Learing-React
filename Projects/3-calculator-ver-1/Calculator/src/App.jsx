@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <h1>Calculator Project</h1>
-      <div className={styles.calculator}>
+      <div classNameName={styles.calculator}>
         <Display></Display>
         <BtnContainer></BtnContainer>
       </div>

@@ -5,10 +5,10 @@ import TodoItem2 from "./components/TodoItem2";
 import "./App.css";
 function App() {
   return (
-    <center class="todo-container">
+    <center className="todo-container">
       <AppName> </AppName>
       <AddTodo> </AddTodo>
-      <div class="item-container">
+      <div className="item-container">
         <TodoItem1> </TodoItem1>
         <TodoItem2> </TodoItem2>
       </div>

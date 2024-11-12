@@ -8,22 +8,14 @@ function App() {
   const onButtonClick = (buttonText) => {
     if (buttonText === "C") {
       setCalVal("");
-    } 
-    
-    else if (buttonText === "=") {
+    } else if (buttonText === "=") {
       const result = eval(calVal);
       setCalVal(result);
-    } 
-    
-    else if (buttonText === "CE") {
+    } else if (buttonText === "CE") {
       setCalVal("");
-    } 
-    else if (buttonText === "CE") {
-    } 
-    else if (buttonText === "=") {
-    } 
-    
-    else {
+    } else if (buttonText === "CE") {
+    } else if (buttonText === "=") {
+    } else {
       const newDisplayValue = calVal + buttonText;
       setCalVal(newDisplayValue);
     }
@@ -31,7 +23,7 @@ function App() {
 
   return (
     <>
-      <div className={styles.calculator}>
+      <div classNameName={styles.calculator}>
         <Display displayValue={calVal}></Display>
         <BtnContainer onButtonClick={onButtonClick}></BtnContainer>
       </div>
