@@ -1,0 +1,11 @@
+.all_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.group {
+  display: flex;
+}
