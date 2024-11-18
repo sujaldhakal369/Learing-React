@@ -1,18 +1,14 @@
 import "./App.css";
 import About from "./components/About";
-import Home from "./components/home";
-// import NoteState from "./state/NoteState";
-import NoteContext from "./components/noteContext";
+import Home from "./components/Home";
+import NoteState from "./state/NoteState";
 
 function App() {
   return (
-    <>
-      {/* <NoteState> */}
-      <Home></Home>
-      <About></About>
-      {/* <NoteContext></NoteContext> */}
-      {/* </NoteState> */}
-    </>
+    <NoteState>
+      <Home />
+      <About />
+    </NoteState>
   );
 }
 

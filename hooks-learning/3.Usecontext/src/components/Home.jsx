@@ -1,15 +1,13 @@
 import { useContext } from "react";
-import noteContext from "./noteContext";
+import NoteContext from "./NoteContext";
+
 const Home = () => {
-  const a = useContext(noteContext);
+  const a = useContext(NoteContext);
 
   return (
-    <>
-      <div>
-        hello
-        {/* my name is {a.name}. I am reading in {a.class}. */}
-      </div>
-    </>
+    <div>
+      My name is {a.name}. I am reading in {a.class}.
+    </div>
   );
 };
 

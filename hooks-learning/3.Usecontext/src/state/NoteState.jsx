@@ -1,17 +1,13 @@
-import noteContext from "../components/noteContext";
+import NoteContext from "../components/NoteContext";
 
 const NoteState = (props) => {
   const state = {
-    name: "sujal",
+    name: "Sujal",
     class: "Bachelor",
   };
 
   return (
-    <>
-      <NoteContext.Provider value={state}>
-        {props.children}
-      </NoteContext.Provider>
-    </>
+    <NoteContext.Provider value={state}>{props.children}</NoteContext.Provider>
   );
 };
 
