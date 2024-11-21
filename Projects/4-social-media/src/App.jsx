@@ -25,7 +25,6 @@ function App() {
           ) : selectedTab === "Create Post" ? (
             <CreatePost></CreatePost>
           ) : null}
-
           <Footer></Footer>
         </div>
       </div>
