@@ -12,6 +12,7 @@ function App() {
   const [selectedTab, setSelectedTab] = useState("Home");
 
   return (
+    //just a comment
     <PostListProvider>
       <div className="app-container">
         <Slidebar
